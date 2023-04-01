@@ -1,10 +1,10 @@
 pipeline {
-    agent { dockerfile true }
+    agent any
     stages {
         
         stage('build'){
             steps{
-                sh ' '
+                sh ' docker build -t akshay .'
             }
         }
     }
