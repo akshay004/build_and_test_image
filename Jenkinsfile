@@ -5,7 +5,7 @@ pipeline {
         stage('build'){
             steps{
                 sh ' docker build -t akshay . '
-                sh ' docker login ghcr.io -u $ghcr_user -p $CR_PAT '
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                 sh ' docker tag 3f8a00f137a0 ghcr.io/akshay004/akshay '
                 sh ' docker push ghcr.io/akshay004/jenkins/akshay '
                 sh ' docker logout ghcr.io '
