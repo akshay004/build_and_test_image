@@ -18,7 +18,8 @@ pipeline {
 		}
 		stage('Push') {
 			steps {
-				sh ' docker tag akshay:latest ghcr.io/akshay004/akshay:latest ' 
+				
+				sh ' docker tag `docker images --format="{{.Repository}} {{.ID}}" |  grep "^jenkins/jenkins" |  cut -d' ' -f2 |  xargs` ghcr.io/akshay004/akshay:latest ' 
 				sh 'docker push ghcr.io/akshay004/jenkins/akshay:latest '
 			}
 		}
