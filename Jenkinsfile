@@ -18,8 +18,8 @@ pipeline {
 		}
 		stage('Push') {
 			steps {
-				sh ' docker tag akshay:latest ghcr.io/akshay004/akshay ' 
-				sh 'docker push ghcr.io/akshay004/jenkins/akshay'
+				sh ' docker tag akshay:latest ghcr.io/akshay004/akshay:latest ' 
+				sh 'docker push ghcr.io/akshay004/jenkins/akshay:latest '
 			}
 		}
 	}
