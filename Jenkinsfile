@@ -23,7 +23,7 @@ pipeline {
 		}
 		stage('Push') {
 			steps {
-				sh 'docker push ghcr.io/akshay004/jenkins/akshay:latest '
+				sh 'docker push ghcr.io/akshay004/akshay:latest '
 			}
 		}
 	}
