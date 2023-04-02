@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-		DOCKERHUB_CREDENTIALS=credentials('git-hub')
+		DOCKERHUB_CREDENTIALS=credentials('fullaccess')
 	}
     
     stages {
