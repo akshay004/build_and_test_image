@@ -17,7 +17,7 @@ pipeline {
 		stage('Login') {
 
 			steps {
-				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+				sh 'echo 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 | docker login ghcr.io -u akshay004 --password-stdin'
 			}
 		}
 
