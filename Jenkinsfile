@@ -4,8 +4,11 @@ pipeline {
         
         stage('build'){
             steps{
-                sh ' docker build -t akshay .'
-                sh 'docker run -itd -p 8080:80 --name ubuntu-nginx ubuntu/nginx'
+                sh ' docker build -t akshay . '
+                sh ' echo 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 | docker login ghcr.io -u akshay004 --password-stdin '
+                sh ' docker tag 3f8a00f137a0 ghcr.io/akshay004/akshay '
+                sh ' docker push ghcr.io/akshay004/jenkins/akshay '
+                sh ' docker logout ghcr.io '
             }
         }
     }
