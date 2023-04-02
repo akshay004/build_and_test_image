@@ -8,7 +8,7 @@ pipeline {
     stages {
 		stage('Build') {
 			steps {
-				sh 'docker build -t akshay:latest .'
+				sh 'docker build -t akshay:test-1 .'
 			}
 		}
 		stage('Login') {
@@ -18,12 +18,12 @@ pipeline {
 		}
 	    	stage('Tag') {
 			steps {
-				sh 'docker tag akshay:latest ghcr.io/akshay004/akshay:latest '
+				sh 'docker tag akshay:test-1 ghcr.io/akshay004/akshay:test-1 '
 			}
 		}
 		stage('Push') {
 			steps {
-				sh 'docker push ghcr.io/akshay004/akshay:latest '
+				sh 'docker push ghcr.io/akshay004/akshay:test-1 '
 			}
 		}
 	}
