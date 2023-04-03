@@ -23,7 +23,7 @@ pipeline {
 		}
 		stage('Push') {
 			steps {
-				sh 'docker push ghcr.io/redmine004/redmine:test-1.1 '
+				sh 'docker push ghcr.io/akshay004/redmine:test-1.1 '
 			}
 		}
 	}
