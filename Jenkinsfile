@@ -18,7 +18,7 @@ pipeline {
 		}
 	    	stage('Tag') {
 			steps {
-				sh 'docker tag redmine:test-1.1 ghcr.io/redmine004/redmine:test-1.1 '
+				sh 'docker tag redmine:test-1.1 ghcr.io/akshay004/redmine:test-1.1 '
 			}
 		}
 		stage('Push') {
