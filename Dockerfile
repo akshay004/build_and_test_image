@@ -1,1 +1,1 @@
-FROM redmine
+FROM mysql

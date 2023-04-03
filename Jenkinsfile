@@ -8,7 +8,7 @@ pipeline {
     stages {
 		stage('Build') {
 			steps {
-				sh 'docker build -t redmine:test-1.1 .'
+				sh 'docker build -t mysql:test-1.1 .'
 			}
 		}
 		stage('Login') {
@@ -18,12 +18,12 @@ pipeline {
 		}
 	    	stage('Tag') {
 			steps {
-				sh 'docker tag redmine:test-1.1 ghcr.io/akshay004/redmine:test-1.1 '
+				sh 'docker tag mysql:test-1.1 ghcr.io/akshay004/mysql:test-1.1 '
 			}
 		}
 		stage('Push') {
 			steps {
-				sh 'docker push ghcr.io/akshay004/redmine:test-1.1 '
+				sh 'docker push ghcr.io/akshay004/mysql:test-1.1 '
 			}
 		}
 	}
